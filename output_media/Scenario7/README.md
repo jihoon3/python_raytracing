@@ -5,6 +5,9 @@ A somewhat chaotic arrangement (with 76 sphere objects).
 An overview of the setup
 <img src="7h.png?raw=true" alt="drawing"/>
 
+# 7a.png
+<img src="7a.png?raw=true" alt="drawing"/>
+
 # 7b.png
 <img src="7b.png?raw=true" alt="drawing"/>
 
@@ -22,6 +25,3 @@ An overview of the setup
 
 # 7g.png
 <img src="7g.png?raw=true" alt="drawing"/>
-
-# 7h.png
-<img src="7h.png?raw=true" alt="drawing"/>
