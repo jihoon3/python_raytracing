@@ -39,8 +39,18 @@ only one instance of each Camera/Light classes are supported.
 3. Objects/SolidObjects - There is one implementation of a "Solid Object" - the Sphere object. Instances of this class
 contains information about the radius, position, colour e.t.c. of a single sphere instance.
 
-The project also uses the 
-[Blinn-Phong shading model](https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model) to render the images.
+The project uses the 
+[Blinn-Phong shading model](https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model) to render the images 
+with an additional modelling of light intensity. In the Plinn-Phong shading model, the light source does not lose
+intensity with distance to the object. In this implementation of the shading model, the light source has a parameter
+called "intensity", `i`, and if the distance to the illuminated object is `d` say, then the illumination factor is 
+determined by the formula:
+```
+d2 = d ** 2
+illumination_factor = min(d2, i)/d2
+```
+Then, the Blinn-Phong calculated pixel rgb (on the 0-1 scale) value is multiplied by the illumination factor.
+
 
 ## Objects.SolidObjects.Sphere
 ```python
@@ -146,7 +156,8 @@ light = Light(
     coordinates=np.array([0.5, -1.2, 4.12], dtype='float32'),
     ambient=np.array([0.3, 0.2, 0.1], dtype="float32"),
     diffuse=np.array([0.925, 0.678, 0.4], dtype="float32"),
-    specular=np.array([1.0, 1.0, 1.0], dtype="float32")
+    specular=np.array([1.0, 1.0, 1.0], dtype="float32"),
+    intensity=100
 )
 ```
 **Arguments**:
@@ -159,6 +170,10 @@ to the [Blinn-Phong shading model](https://en.wikipedia.org/wiki/Blinn%E2%80%93P
 to the [Blinn-Phong shading model](https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model).
 - _specular_ (numpy array). 3 dimensional float32 numpy array (RGB) representing the **specular** of the light according
 to the [Blinn-Phong shading model](https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model).
+- _intensity_ (int or float). The intensity constant of the light. This constant is used to calculate the illumination factor
+which adjusts the Blinn-Phong calculated rgb pixel value. If the object lies within distance `intensity**0.5` of the light,
+it is illuminated as per Blinn-Phong, but if it lies further away, it is illuminated less and less (inversely proportional
+to the square of the distance).
 
 ***Note*** the act of creating an instance of a Light will automatically register it to the SceneInterface instance
 (see the SceneInterface section below for more information). Moreover, if a light instance is edited (e.g. location
