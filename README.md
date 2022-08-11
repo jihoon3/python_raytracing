@@ -3,6 +3,11 @@
 A python implementation of ray tracing using the numba.cuda.jit wrapper for computation, therefore
 any device running this project must have a cuda enabled graphics card.
 
+### Requirements
+- Cuda toolkit (tested on v11.3.1).
+- Cuda enabled graphics card. 
+- Packages in requirements.txt. Run `pip install -r requirements.txt` to install all.
+
 The following are the images from the created scenarios. To see in more detail, visit the output_media directory.
 
 ### Scenario 3 images
