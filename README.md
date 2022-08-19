@@ -11,17 +11,20 @@ any device running this project must have a cuda enabled graphics card.
 The following are the images from the created scenarios. To see in more detail, visit the output_media directory.
 
 ### Scenario 3 images
+https://github.com/jihoon3/python_raytracing/tree/main/output_media/Scenario3
 
 <img src="output_media/Scenario3/r1.png?raw=true" alt="drawing" width="375"/> <img src="output_media/Scenario3/r3.png?raw=true" alt="drawing" width="375"/>
 <img src="output_media/Scenario3/r5.png?raw=true" alt="drawing" width="375"/>
 
 ### Scenario 7 images
+https://github.com/jihoon3/python_raytracing/tree/main/output_media/Scenario7
 <img src="output_media/Scenario7/7h.png?raw=true" alt="drawing" width="375"/> <img src="output_media/Scenario7/7a.png?raw=true" alt="drawing" width="375"/>
 <img src="output_media/Scenario7/7b.png?raw=true" alt="drawing" width="375"/> <img src="output_media/Scenario7/7c.png?raw=true" alt="drawing" width="375"/>
 <img src="output_media/Scenario7/7d.png?raw=true" alt="drawing" width="375"/> <img src="output_media/Scenario7/7e.png?raw=true" alt="drawing" width="375"/>
 <img src="output_media/Scenario7/7f.png?raw=true" alt="drawing" width="375"/> <img src="output_media/Scenario7/7g.png?raw=true" alt="drawing" width="375"/>
 
 ### Scenario 8 images
+https://github.com/jihoon3/python_raytracing/tree/main/output_media/Scenario8
 <img src="output_media/Scenario8/without_outer_shell_overview.png?raw=true" alt="drawing" width="375"/> <img src="output_media/Scenario8/main2.png?raw=true" alt="drawing" width="375"/>
 <img src="output_media/Scenario8/main4.png?raw=true" alt="drawing" width="375"/> <img src="output_media/Scenario8/main7.png?raw=true" alt="drawing" width="375"/>
 <img src="output_media/Scenario8/focus_on_blue2.png?raw=true" alt="drawing" width="375"/> <img src="output_media/Scenario8/focus_on_blue4.png?raw=true" alt="drawing" width="375"/>
